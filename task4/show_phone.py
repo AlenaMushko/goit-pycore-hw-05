@@ -9,6 +9,7 @@ FILENAME = Path(__file__).parent / 'contacts.json'
 
 @input_error
 def show_phone(args):
+    """ Show phone number by name """
     name = args[0]
     if len(name) < 3:
         return ERROR_MESSAGES['too_short_name']
@@ -21,6 +22,7 @@ def show_phone(args):
 
 @input_error
 def show_all():
+    """ Show all contacts """
     if not FILENAME.exists():
         return None
     try:

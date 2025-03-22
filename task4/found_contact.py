@@ -5,6 +5,7 @@ from messages import ERROR_MESSAGES
 FILENAME = Path(__file__).parent / 'contacts.json'
 
 def found_contact(name: str) -> dict | None:
+    """ Find a contact by name in the contacts.json file. """
     if not FILENAME.exists():
         return None
     try:

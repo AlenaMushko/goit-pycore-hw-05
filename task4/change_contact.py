@@ -9,6 +9,7 @@ FILENAME = Path(__file__).parent / 'contacts.json'
 
 @input_error
 def change_contact(args):
+    """ Change the phone number of a contact in the contacts.json file. """
     name, phone = args
     if len(name) < 3:
         return ERROR_MESSAGES['too_short_name']

@@ -9,6 +9,7 @@ FILENAME = Path(__file__).parent / 'contacts.json'
 
 @input_error
 def add_contact(args):
+    """ Add a new contact to the contacts.json file. """
     name, phone = args
     if len(name) < 3:
         return ERROR_MESSAGES['too_short_name']
